@@ -1,5 +1,6 @@
 import cv2 as cv
 
+
 class VideoStream:
     def __init__(self, index=0):
         self.cap = cv.VideoCapture(index)

@@ -1,5 +1,5 @@
 import numpy as np
-import cv2 as ip
+import cv2 as cv
 
 
 class ColorRangeDetector:
@@ -18,13 +18,13 @@ class ColorRangeDetector:
             or any(c < 0 or c > 255 for c in color)
         ):
             raise ValueError(
-                f'Invalid BGR color: {color}. Must be 3 values in range 0–255.'
+                f"Invalid BGR color: {color}. Must be 3 values in range 0–255."
             )
 
     def get_range(self, bgr_color):
         self.validate_color(bgr_color)
 
-        hsv_pixel = ip.cvtColor(np.uint8([[bgr_color]]), ip.COLOR_BGR2HSV)[0][0]
+        hsv_pixel = cv.cvtColor(np.uint8([[bgr_color]]), cv.COLOR_BGR2HSV)[0][0]
         hue = int(hsv_pixel[0])
 
         lower = np.array(
