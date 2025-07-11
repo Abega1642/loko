@@ -1,1 +1,1 @@
-print('Mavomavo project initialized!')
+print("Mavomavo project initialized!")

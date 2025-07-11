@@ -1,1 +1,1 @@
-print('Mavomavo project init')
+print("Mavomavo project init")
