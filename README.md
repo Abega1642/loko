@@ -55,28 +55,26 @@ It detects user-defined colors in a camera stream, computes their HSV bounds, an
    pip install -r requirement.txt
    ```
 
-### 🟨 Launch the app
+### 🎨 Launch the app
 
 Inside your virtual environment:
 
 ```bash
-python3 src/main.py
+└─[$] python src/main.py                                                                                                                                                                                    [19:07:35]
+
+? 🎨 Choose a color to track: (Use arrow keys)
+ » yellow
+   blue
+   red
+   orange
+   purple
+   black
+
 ```
+
+### How to quit ?
 
 Press `Q` to quit the video stream at any time.
-
----
-
-## ⚙️ Configuration
-
-You can change the tracked color by editing [`main.py`](src/main.py):
-
-```python
-yellow_bgr = [0, 255, 255]  # Change this to any BGR triplet
-app = ColorTrackingApp(yellow_bgr)
-```
-
-Supported formats: list/tuple of 3 integers in range 0–255.
 
 ---
 
