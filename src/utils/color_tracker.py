@@ -1,6 +1,7 @@
 from PIL import Image
 import cv2 as cv
 
+
 class ColorTracker:
     def __init__(self, color_detector, target_bgr):
         self.detector = color_detector

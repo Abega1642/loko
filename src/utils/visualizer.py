@@ -1,5 +1,6 @@
 import cv2 as cv
 
+
 class Visualizer:
     def __init__(self, color=(0, 255, 0), thickness=5):
         self.color = color
@@ -7,10 +8,10 @@ class Visualizer:
 
     def annotate(self, frame, bbox):
         if (
-                not bbox or
-                not isinstance(bbox, (list, tuple)) or
-                len(bbox) != 4 or
-                not all(isinstance(coord, int) for coord in bbox)
+            not bbox
+            or not isinstance(bbox, (list, tuple))
+            or len(bbox) != 4
+            or not all(isinstance(coord, int) for coord in bbox)
         ):
             return frame
 

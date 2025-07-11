@@ -48,7 +48,7 @@ class TestVisualizer(unittest.TestCase):
 
     def test_invalid_bbox_gracefully_handled(self):
         img = np.zeros((100, 100, 3), dtype=np.uint8)
-        bad_bbox = ('a', None, 3.14, [5])
+        bad_bbox = ("a", None, 3.14, [5])
         try:
             self.visualizer.annotate(img.copy(), bad_bbox)
         except Exception as e:

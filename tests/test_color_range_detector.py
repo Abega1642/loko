@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 
-from src.utils.color_tool import ColorRangeDetector
+from src.utils.color_range_detector import ColorRangeDetector
 
 
 class TestColorRangeDetector(unittest.TestCase):
