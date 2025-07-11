@@ -50,7 +50,9 @@ class TestColorRangeDetector(unittest.TestCase):
         self.assertTrue(isinstance(lb[0], np.uint8))
 
     def test_custom_ranges(self):
-        custom = ColorRangeDetector(hue_delta=5, saturation_range=(50, 200), value_range=(10, 100))
+        custom = ColorRangeDetector(
+            hue_delta=5, saturation_range=(50, 200), value_range=(10, 100)
+        )
         lb, ub = custom.get_range([10, 200, 100])
         self.assertEqual(lb[1], 50)
         self.assertEqual(ub[2], 100)
